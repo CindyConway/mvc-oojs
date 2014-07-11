@@ -5,6 +5,7 @@ $(document).ready(function(){
    controller.bindListeners();
 });
 
+//----------- CONTROLLER ---------------------
 function Controller(view, model){
   this.view = view;
   this.model = model;
@@ -22,11 +23,11 @@ Controller.prototype = {
     var dieCount = this.view.dieCount;
     for (i=0; i < dieCount; i++){ 
       this.view.updateDie(i, this.model.randomNumber());
-    },
-  }
+    }
+  },
 }
 
-
+//----------- VIEW ---------------------
 function View(){
     this.dieCount = 0;
 };
@@ -42,6 +43,7 @@ View.prototype = {
   },
 }
 
+//----------- MODEL ---------------------
 function Model(){};
 
 Model.prototype = {
