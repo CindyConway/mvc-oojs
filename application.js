@@ -19,11 +19,10 @@ Controller.prototype = {
     this.view.addDie();
   },
   rollDice: function(){
-    var dieCount = this.view.dieCount
+    var dieCount = this.view.dieCount;
     for (i=0; i < dieCount; i++){ 
-      this.view.updateDie(i, this.model.randomNumber())
-    }
-
+      this.view.updateDie(i, this.model.randomNumber());
+    },
   }
 }
 
@@ -35,18 +34,15 @@ function View(){
 View.prototype = { 
   addDie: function(){
     $('.dice').append('<div class="die">0</div>');
-    this.dieCount = $('.die').length
+    this.dieCount = $('.die').length;
   },
   updateDie: function(i, value){
 
-    $('.die:eq(' + i + ')').text(value)
-
-  }
+    $('.die:eq(' + i + ')').text(value);
+  },
 }
 
-function Model(){
-
-};
+function Model(){};
 
 Model.prototype = {
   randomNumber: function () {
